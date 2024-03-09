@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://dd4oehs5lcnfs"]
 
-[ext_resource type="Script" path="res://court.gd" id="1_3y721"]
+[ext_resource type="Script" path="res://scripts/court.gd" id="1_4gxrg"]
 
 [node name="Court" type="Node2D"]
-script = ExtResource("1_3y721")
+script = ExtResource("1_4gxrg")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 450.0

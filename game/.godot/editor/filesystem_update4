@@ -4,3 +4,9 @@ res://main.gd
 res://court.tscn
 res://cell.gd
 res://court.gd
+res://scenes/main.tscn
+res://scenes/cell.tscn
+res://scenes/court.tscn
+res://scripts/main.gd
+res://scripts/cell.gd
+res://scripts/court.gd
