@@ -30,14 +30,5 @@ offset_right = 1102.0
 offset_bottom = 85.0
 text = "Main"
 
-[node name="TimeLabel" type="Label" parent="."]
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 150.0
-offset_bottom = 85.0
-text = "Time 0000"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [connection signal="pressed" from="CourtButton" to="." method="_on_court_button_pressed"]
 [connection signal="pressed" from="MainButton" to="." method="_on_main_button_pressed"]

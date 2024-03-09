@@ -11,3 +11,6 @@ res://scripts/main.gd
 res://scripts/cell.gd
 res://scripts/court.gd
 res://scenes/game.tscn
+res://scenes/game.gd
+res://scripts/game.gd
+res://scripts/global_script.gd
