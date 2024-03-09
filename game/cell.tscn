@@ -22,4 +22,12 @@ offset_bottom = 350.0
 text = "Go to the Court Room
 "
 
+[node name="MainButton" type="Button" parent="."]
+offset_left = 1052.0
+offset_top = 50.0
+offset_right = 1102.0
+offset_bottom = 85.0
+text = "Main"
+
 [connection signal="pressed" from="CourtButton" to="." method="_on_court_button_pressed"]
+[connection signal="pressed" from="MainButton" to="." method="_on_main_button_pressed"]
