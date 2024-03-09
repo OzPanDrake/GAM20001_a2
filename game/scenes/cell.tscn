@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/cell.gd" id="1_8sjuh"]
 
-[node name="World" type="Node2D"]
+[node name="Cell" type="Node2D"]
 script = ExtResource("1_8sjuh")
 
 [node name="CellLabel" type="Label" parent="."]

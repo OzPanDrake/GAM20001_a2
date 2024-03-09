@@ -10,3 +10,4 @@ res://scenes/court.tscn
 res://scripts/main.gd
 res://scripts/cell.gd
 res://scripts/court.gd
+res://scenes/game.tscn
