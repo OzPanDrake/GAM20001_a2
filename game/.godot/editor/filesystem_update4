@@ -1,2 +1,6 @@
+res://cell.tscn
 res://main.tscn
-res://world.tscn
+res://main.gd
+res://court.tscn
+res://cell.gd
+res://court.gd
