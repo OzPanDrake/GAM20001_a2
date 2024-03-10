@@ -3,30 +3,31 @@
 [ext_resource type="Script" path="res://scripts/court.gd" id="1_4gxrg"]
 
 [node name="Court" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_4gxrg")
 
 [node name="CourtLabel" type="Label" parent="."]
-offset_left = 450.0
+offset_left = 387.0
 offset_top = 100.0
-offset_right = 700.0
+offset_right = 637.0
 offset_bottom = 150.0
 text = "This is the court room"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CellButton" type="Button" parent="."]
-offset_left = 450.0
+offset_left = 387.0
 offset_top = 250.0
-offset_right = 700.0
-offset_bottom = 350.0
+offset_right = 637.0
+offset_bottom = 325.0
 text = "Go to your Prison Cell"
 
 [node name="MainButton" type="Button" parent="."]
-offset_left = 1052.0
+offset_left = 924.0
 offset_top = 50.0
-offset_right = 1102.0
+offset_right = 974.0
 offset_bottom = 85.0
-text = "Main"
+text = "Menu"
 
 [connection signal="pressed" from="CellButton" to="." method="_on_cell_button_pressed"]
 [connection signal="pressed" from="MainButton" to="." method="_on_main_button_pressed"]

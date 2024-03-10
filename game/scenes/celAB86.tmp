@@ -29,7 +29,7 @@ offset_left = 924.0
 offset_top = 50.0
 offset_right = 974.0
 offset_bottom = 85.0
-text = "Menu"
+text = "Main"
 
 [node name="CountdownTimer" type="Timer" parent="."]
 wait_time = 500.0
@@ -38,10 +38,10 @@ autostart = true
 
 [node name="TimerLabel" type="Label" parent="."]
 offset_left = 25.0
-offset_top = 10.0
-offset_right = 225.0
-offset_bottom = 60.0
-text = "Time Remaining: 00:00:00"
+offset_top = 25.0
+offset_right = 175.0
+offset_bottom = 75.0
+text = "500"
 horizontal_alignment = 1
 vertical_alignment = 1
 

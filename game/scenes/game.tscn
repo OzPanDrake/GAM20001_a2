@@ -6,12 +6,37 @@
 [ext_resource type="PackedScene" uid="uid://dd4oehs5lcnfs" path="res://scenes/court.tscn" id="3_frxyl"]
 
 [node name="Game" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_a6h7w")
 
 [node name="Main" parent="." instance=ExtResource("1_bao4x")]
+process_mode = 0
+visible = false
 
 [node name="Cell" parent="." instance=ExtResource("2_xaxah")]
 visible = false
 
 [node name="Court" parent="." instance=ExtResource("3_frxyl")]
 visible = false
+
+[node name="WelcomeLabel" type="Label" parent="."]
+offset_top = 200.0
+offset_right = 1024.0
+offset_bottom = 300.0
+text = "Welcome"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InfoLabel" type="Label" parent="."]
+offset_top = 300.0
+offset_right = 1024.0
+offset_bottom = 400.0
+text = "A game brought to you by Swinburne University Students
+2024-HS1-GAM20002-Pervasivr Game Design Lab-H1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
