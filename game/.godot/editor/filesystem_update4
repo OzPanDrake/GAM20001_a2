@@ -15,3 +15,5 @@ res://scripts/game.gd
 res://UI/pause_menu.gd
 res://scripts/scene_switcher.gd
 res://scenes/voice_file.gd
+res://UI/main_menu_theme.tres
+res://UI/main_menu_background_theme.tres

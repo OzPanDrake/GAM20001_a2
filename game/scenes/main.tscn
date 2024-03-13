@@ -1,22 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc6ilo1rhty56"]
+[gd_scene load_steps=4 format=3 uid="uid://bc6ilo1rhty56"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_afbki"]
+[ext_resource type="Theme" uid="uid://bxogfjdc43myj" path="res://UI/main_menu_theme.tres" id="2_g50nc"]
+[ext_resource type="Texture2D" uid="uid://cpykayw38pukc" path="res://images/gavel_cuffs_needle.png" id="3_llimd"]
 
 [node name="Main" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_afbki")
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control"]
+top_level = true
 offset_top = 50.0
 offset_right = 1024.0
 offset_bottom = 200.0
+theme = ExtResource("2_g50nc")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 80
 text = "Sentenced to Death"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="PlayButton" type="Button" parent="."]
+[node name="PlayButton" type="Button" parent="CanvasLayer/Control"]
+top_level = true
 offset_left = 150.0
 offset_top = 200.0
 offset_right = 350.0
@@ -26,7 +42,8 @@ size_flags_vertical = 4
 tooltip_text = "Live"
 text = "Play"
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="QuitButton" type="Button" parent="CanvasLayer/Control"]
+top_level = true
 offset_left = 824.0
 offset_top = 500.0
 offset_right = 974.0
@@ -34,8 +51,25 @@ offset_bottom = 550.0
 tooltip_text = "Give up on life"
 text = "Quit"
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="image" type="TextureRect" parent="CanvasLayer/Control"]
+visibility_layer = 524289
+layout_mode = 0
+offset_left = 325.0
+offset_top = 91.0
+offset_right = 825.0
+offset_bottom = 591.0
+texture = ExtResource("3_llimd")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 300)
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/QuitButton" to="." method="_on_quit_button_pressed"]

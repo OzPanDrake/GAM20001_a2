@@ -1,13 +1,14 @@
+ColorRect
+TextureRect
+Control
+CanvasLayer
 AudioStreamPlayer2D
 Timer
 Label
 Panel
-CanvasLayer
 Node2D
-ColorRect
 Camera2D
 Button
 VBoxContainer
-Control
 CanvasGroup
 Node
