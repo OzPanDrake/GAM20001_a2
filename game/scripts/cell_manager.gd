@@ -19,14 +19,14 @@ var bs_array = []
 var main_array = []
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	bs_array = load_lines(BS_TEXT_FILE)
 	main_array = load_lines(MAIN_TEXT_FILE)
 	#print_debug("Main Line 2: " + main_array[1])
 	#print_debug("BS Line 2: " + bs_array[1])
 
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(_delta) -> void:
 	pass
 
 func load_lines(input_file):
@@ -40,6 +40,6 @@ func load_lines(input_file):
 		file.close()
 		return output_array
 		
-func _input(event : InputEvent):
+func _input(event : InputEvent) -> void:
 	if(event.is_action_pressed("ui_cancel")):
 		game_paused = !game_paused

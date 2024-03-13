@@ -9,3 +9,9 @@ res://scenes/court.tscn
 res://UI/pause_menu.tscn
 res://scripts/splash_screen.gd
 res://scripts/intro.gd
+res://scripts/cell_manager.gd
+res://scripts/court.gd
+res://scripts/game.gd
+res://UI/pause_menu.gd
+res://scripts/scene_switcher.gd
+res://scenes/voice_file.gd

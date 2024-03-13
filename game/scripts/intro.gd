@@ -4,16 +4,16 @@ const INTRO_FILE = "res://texts/intro.txt"
 
 @onready var timer : Timer = $Timer
 
-func _ready():
+func _ready() -> void:
 	var text = load_intro()
 	$CanvasLayer/IntroLabel.text = text
 	timer.wait_time = 1
 	timer.start()
 
-func _on_timer_timeout():
+func _on_timer_timeout() -> void:
 	Start_Game()
 
-func Start_Game():
+func Start_Game() -> void:
 	SceneSwitcher.switch_scene("res://scenes/cell_manager.tscn")
 
 func load_intro():
