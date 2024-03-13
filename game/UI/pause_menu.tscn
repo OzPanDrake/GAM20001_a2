@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnbmi1u4xsiif"]
+
+[ext_resource type="Script" path="res://UI/pause_menu.gd" id="1_5c1f2"]
+[ext_resource type="Theme" uid="uid://b5psgtpppb2x8" path="res://UI/pause_menu_theme.tres" id="2_0r7dc"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5c1f2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1024.0
+offset_bottom = 600.0
+color = Color(0.309804, 0.309804, 0.309804, 0.705882)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -75.0
+offset_right = 125.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_0r7dc")
+text = "=PAUSE="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_0r7dc")
+text = "Resume"
+
+[node name="MainButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_0r7dc")
+text = "Main Menu"
+
+[connection signal="pressed" from="Panel/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MainButton" to="." method="_on_main_button_pressed"]

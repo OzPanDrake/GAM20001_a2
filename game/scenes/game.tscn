@@ -1,17 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://ciepygbir2h6w"]
+[gd_scene load_steps=7 format=3 uid="uid://ciepygbir2h6w"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_a6h7w"]
 [ext_resource type="PackedScene" uid="uid://bc6ilo1rhty56" path="res://scenes/main.tscn" id="1_bao4x"]
 [ext_resource type="PackedScene" uid="uid://b4fryjdrmcjyu" path="res://scenes/cell.tscn" id="2_xaxah"]
 [ext_resource type="PackedScene" uid="uid://dd4oehs5lcnfs" path="res://scenes/court.tscn" id="3_frxyl"]
+[ext_resource type="PackedScene" uid="uid://c6mm5r4uy7pea" path="res://scenes/intro.tscn" id="4_o871a"]
+[ext_resource type="PackedScene" uid="uid://c1qrl84p0x37e" path="res://scenes/splash_screen.tscn" id="5_wf05s"]
 
 [node name="Game" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_a6h7w")
 
+[node name="SplashScreen" parent="." instance=ExtResource("5_wf05s")]
+
 [node name="Main" parent="." instance=ExtResource("1_bao4x")]
+visible = false
+
+[node name="Intro" parent="." instance=ExtResource("4_o871a")]
 
 [node name="Cell" parent="." instance=ExtResource("2_xaxah")]
 visible = false
 
 [node name="Court" parent="." instance=ExtResource("3_frxyl")]
+process_mode = 0
 visible = false

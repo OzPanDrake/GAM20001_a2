@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3v5lkx35cfso"]
+
+[ext_resource type="Script" path="res://scripts/cell_manager.gd" id="1_gfcc7"]
+[ext_resource type="PackedScene" uid="uid://b4fryjdrmcjyu" path="res://scenes/cell.tscn" id="2_5umg3"]
+[ext_resource type="PackedScene" uid="uid://bnbmi1u4xsiif" path="res://UI/pause_menu.tscn" id="3_pwa5f"]
+
+[node name="Cell_Manager" type="Node"]
+process_mode = 3
+script = ExtResource("1_gfcc7")
+
+[node name="Cell" parent="." instance=ExtResource("2_5umg3")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" node_paths=PackedStringArray("cell_manager") instance=ExtResource("3_pwa5f")]
+cell_manager = NodePath("../..")
