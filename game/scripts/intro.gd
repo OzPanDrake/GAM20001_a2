@@ -2,9 +2,13 @@ extends Node2D
 
 const INTRO_FILE = "res://texts/intro.txt"
 
+@onready var timer : Timer = $Timer
+
 func _ready():
 	var text = load_intro()
 	$CanvasLayer/IntroLabel.text = text
+	timer.wait_time = 1
+	timer.start()
 
 func _on_timer_timeout():
 	Start_Game()

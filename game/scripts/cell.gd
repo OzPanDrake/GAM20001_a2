@@ -1,9 +1,15 @@
 extends Node2D
 
+@onready var cd_timer : Timer = $CountdownTimer
+@onready var voice_timer : Timer = $SoundTimer
+
+func _ready():
+	cd_timer.wait_time = 300
+	cd_timer.start()
+	voice_timer.wait_time = 3
+	voice_timer.start()
+
 func _process(_delta: float):
-	#var timer = $CountdownTimer
-	#timer.wait_time
-	#$CountdownTimer.start
 	$TimerLabel.text = "Time Remaining: " + "%s" %  GetTime()
 
 func _on_court_button_pressed():
@@ -13,7 +19,7 @@ func _on_countdown_timer_timeout():
 	SceneSwitcher.switch_scene("res://scenes/court.tscn")
 
 func GetTime():
-	var time = round($CountdownTimer.time_left)
+	var time = round(cd_timer.time_left)
 	var seconds = int(time)%60
 	var minutes = (int(time)/60)%60
 	var hours = (int(time)/60)/60
