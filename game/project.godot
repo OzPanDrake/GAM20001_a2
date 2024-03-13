@@ -11,9 +11,19 @@ config_version=5
 [application]
 
 config/name="Game Project 1"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="res://scenes/splash_screen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[debug]
+
+gdscript/warnings/integer_division=0
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=600
+window/stretch/mode="viewport"
 
 [rendering]
 
