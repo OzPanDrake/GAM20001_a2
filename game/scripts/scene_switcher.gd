@@ -2,6 +2,8 @@ extends Node
 
 var current_scene = null
 
+# https://www.youtube.com/watch?v=RMdf60IAxY0&t=888s
+
 func _ready():
 	var root = get_tree().root
 	current_scene = root.get_child(root.get_child_count() - 1)

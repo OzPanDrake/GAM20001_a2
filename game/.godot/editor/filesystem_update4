@@ -12,3 +12,4 @@ res://scripts/cell.gd
 res://scripts/court.gd
 res://UI/pause_menu.gd
 res://UI/pause_menu_theme.tres
+res://scripts/scene_switcher.gd
