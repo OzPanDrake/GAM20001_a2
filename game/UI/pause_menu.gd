@@ -9,6 +9,7 @@ func _ready():
 	hide()
 	cell_manager.connect("toggle_game_paused", _on_cell_manager_toggle_game_paused)
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass

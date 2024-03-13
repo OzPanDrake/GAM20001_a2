@@ -1,10 +1,13 @@
-res://scenes/cell.tscn
-res://scripts/main.gd
 res://scenes/splash_screen.tscn
+res://scripts/main.gd
 res://scenes/main.tscn
 res://scenes/intro.tscn
 res://scenes/cell_manager.tscn
+res://scenes/cell.tscn
 res://scenes/court.tscn
 res://UI/pause_menu.tscn
+res://UI/pause_menu.gd
+res://scripts/cell_manager.gd
 res://scripts/cell.gd
-res://scenes/voice_file.gd
+res://scripts/intro.gd
+res://scripts/scene_switcher.gd
