@@ -11,3 +11,6 @@ res://scripts/cell_manager.gd
 res://scripts/cell.gd
 res://scripts/intro.gd
 res://scripts/scene_switcher.gd
+res://references.txt
+res://texts/main_lines.txt
+res://texts/bs_lines.txt

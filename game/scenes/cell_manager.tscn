@@ -10,7 +10,7 @@ script = ExtResource("1_gfcc7")
 
 [node name="Cell" parent="." instance=ExtResource("2_5umg3")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="PauseCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" node_paths=PackedStringArray("cell_manager") instance=ExtResource("3_pwa5f")]
+[node name="PauseMenu" parent="PauseCanvasLayer" node_paths=PackedStringArray("cell_manager") instance=ExtResource("3_pwa5f")]
 cell_manager = NodePath("../..")
