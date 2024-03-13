@@ -1,11 +1,13 @@
 extends Node2D
 
 func _process(_delta: float):
+	#var timer = $CountdownTimer
+	#timer.wait_time
+	#$CountdownTimer.start
 	$TimerLabel.text = "Time Remaining: " + "%s" %  GetTime()
 
 func _on_court_button_pressed():
 	SceneSwitcher.switch_scene("res://scenes/court.tscn")
-
 
 func _on_countdown_timer_timeout():
 	SceneSwitcher.switch_scene("res://scenes/court.tscn")

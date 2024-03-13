@@ -1,6 +1,6 @@
 extends Node
 
-class_name  CellManager
+class_name CellManager
 
 const BS_TEXT_FILE = "res://texts/bs_lines.txt"
 const MAIN_TEXT_FILE = "res://texts/main_lines.txt"
@@ -29,10 +29,6 @@ func _ready():
 func _process(_delta):
 	pass
 
-func _input(event : InputEvent):
-	if(event.is_action_pressed("ui_cancel")):
-		game_paused = !game_paused
-
 func load_lines(input_file):
 	if(FileAccess.file_exists(input_file)):
 		var output_array = []
@@ -43,8 +39,7 @@ func load_lines(input_file):
 			output_array.append(file_line)
 		file.close()
 		return output_array
-
-#func load_main_lines():
-	#if(FileAccess.file_exists(MAIN_TEXT_FILE)):
-		#var main_lines_res = MAIN_TEXT_FILE
-		#var _main_file = FileAccess.open(main_lines_res, FileAccess.READ)
+		
+func _input(event : InputEvent):
+	if(event.is_action_pressed("ui_cancel")):
+		game_paused = !game_paused
