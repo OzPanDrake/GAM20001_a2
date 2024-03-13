@@ -17,3 +17,7 @@ func GetTime():
 	var hours = (int(time)/60)/60
 	return "%02d:%02d:%02d" % [hours, minutes, seconds]
 
+
+
+func _on_sound_timer_timeout():
+	$voice_location/AudioStreamPlayer2D.play()

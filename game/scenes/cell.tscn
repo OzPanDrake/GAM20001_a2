@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4fryjdrmcjyu"]
+[gd_scene load_steps=5 format=3 uid="uid://b4fryjdrmcjyu"]
 
 [ext_resource type="Script" path="res://scripts/cell.gd" id="1_8sjuh"]
+[ext_resource type="Texture2D" uid="uid://bgc7iu4ijyfj2" path="res://icon.svg" id="2_f16k5"]
+[ext_resource type="AudioStream" uid="uid://bsvryq4vs0c6r" path="res://sounds/voice/Pirate_Coughing_Short_Cough.wav" id="2_nwlyj"]
+[ext_resource type="Script" path="res://scenes/voice_file.gd" id="3_wr8be"]
 
 [node name="Cell" type="Node2D"]
 process_mode = 1
@@ -28,6 +31,10 @@ wait_time = 500.0
 one_shot = true
 autostart = true
 
+[node name="SoundTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [node name="TimerLabel" type="Label" parent="."]
 offset_left = 25.0
 offset_top = 10.0
@@ -40,5 +47,18 @@ vertical_alignment = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 300)
 
+[node name="voice_location" type="Sprite2D" parent="."]
+position = Vector2(58, 88)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="voice_location"]
+scale = Vector2(4, 4)
+stream = ExtResource("2_nwlyj")
+panning_strength = 3.0
+
 [connection signal="pressed" from="CourtButton" to="." method="_on_court_button_pressed"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
+[connection signal="timeout" from="SoundTimer" to="." method="_on_sound_timer_timeout"]
