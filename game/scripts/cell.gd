@@ -4,11 +4,11 @@ func _process(_delta: float) -> void:
 	$TimerLabel.text = "Time Remaining: " + "%s" %  GetTime()
 
 func _on_court_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/court.tscn")
+	SceneSwitcher.switch_scene("res://scenes/court.tscn")
 
 
 func _on_countdown_timer_timeout():
-	get_tree().change_scene_to_file("res://scenes/court.tscn")
+	SceneSwitcher.switch_scene("res://scenes/court.tscn")
 
 func GetTime():
 	var time = round($CountdownTimer.time_left)
