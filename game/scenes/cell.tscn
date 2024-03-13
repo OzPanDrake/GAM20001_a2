@@ -11,18 +11,18 @@ script = ExtResource("1_8sjuh")
 
 [node name="CellLabel" type="Label" parent="."]
 offset_left = 387.0
-offset_top = 100.0
+offset_top = 25.0
 offset_right = 637.0
-offset_bottom = 150.0
+offset_bottom = 75.0
 text = "This is your prison cell"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CourtButton" type="Button" parent="."]
-offset_left = 387.0
-offset_top = 250.0
-offset_right = 637.0
-offset_bottom = 325.0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 250.0
+offset_bottom = 100.0
 text = "Go to the Court Room
 "
 
@@ -48,7 +48,7 @@ vertical_alignment = 1
 position = Vector2(512, 300)
 
 [node name="voice_location" type="Sprite2D" parent="."]
-position = Vector2(58, 88)
+position = Vector2(27, 263)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_f16k5")
 script = ExtResource("3_wr8be")

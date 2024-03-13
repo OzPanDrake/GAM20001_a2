@@ -8,18 +8,18 @@ script = ExtResource("1_4gxrg")
 
 [node name="CourtLabel" type="Label" parent="."]
 offset_left = 387.0
-offset_top = 100.0
+offset_top = 25.0
 offset_right = 637.0
-offset_bottom = 150.0
+offset_bottom = 75.0
 text = "This is the court room"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CellButton" type="Button" parent="."]
-offset_left = 387.0
-offset_top = 250.0
-offset_right = 637.0
-offset_bottom = 325.0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 250.0
+offset_bottom = 100.0
 text = "Go to your Prison Cell"
 
 [node name="MainButton" type="Button" parent="."]

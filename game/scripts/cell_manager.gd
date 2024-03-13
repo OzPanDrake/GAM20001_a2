@@ -27,13 +27,15 @@ func _input(event : InputEvent):
 		game_paused = !game_paused
 
 func load_bs_lines():
-	var bs_lines_res = "res://texts/bs_lines.txt"
-	var bs_file = FileAccess.open(bs_lines_res, FileAccess.READ)
-	var bs_text = bs_file.get_as_text()
-	print_debug(bs_text)
+	if(FileAccess.file_exists("res://texts/bs_lines.txt")):
+		var bs_lines_res = "res://texts/bs_lines.txt"
+		var bs_file = FileAccess.open(bs_lines_res, FileAccess.READ)
+		var bs_text = bs_file.get_as_text()
+		print_debug(bs_text)
 
 func load_main_lines():
-	var main_lines_res = "res://texts/main_lines.txt"
-	var main_file = FileAccess.open(main_lines_res, FileAccess.READ)
-	var main_text = main_file.get_as_text()
-	print_debug(main_text)
+	if(FileAccess.file_exists("res://texts/main_lines.txt")):
+		var main_lines_res = "res://texts/main_lines.txt"
+		var main_file = FileAccess.open(main_lines_res, FileAccess.READ)
+		var main_text = main_file.get_as_text()
+		print_debug(main_text)
