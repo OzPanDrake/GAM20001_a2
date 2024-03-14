@@ -2,10 +2,10 @@ extends Node
 
 class_name CellManager
 
+signal toggle_game_paused(is_paused : bool)
+
 const BS_TEXT_FILE = "res://texts/bs_lines.txt"
 const MAIN_TEXT_FILE = "res://texts/main_lines.txt"
-
-signal toggle_game_paused(is_paused : bool)
 
 var game_paused : bool = false:
 	get:
@@ -21,7 +21,9 @@ var main_array = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	bs_array = load_lines(BS_TEXT_FILE)
+	GlobalSingleton.bs_array.append_array(bs_array)
 	main_array = load_lines(MAIN_TEXT_FILE)
+	GlobalSingleton.main_array.append_array(main_array)
 	#print_debug("Main Line 2: " + main_array[1])
 	#print_debug("BS Line 2: " + bs_array[1])
 

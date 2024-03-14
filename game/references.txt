@@ -1,3 +1,5 @@
 https://www.youtube.com/watch?v=OWtwYp2lIlQ
 https://www.youtube.com/watch?v=RMdf60IAxY0&t=888s
 https://www.youtube.com/watch?v=UrmUsNfgv7g
+https://www.google.com/search?q=godot+pass+var+to+another+script&client=firefox-b-d&sca_esv=13b8ee85e24d7ba9&sxsrf=ACQVn0_4LhXMeO5dTGPqS-o8IAcYZ8sdxw%3A1710391124571&ei=VH_yZZKzIt3m2roPvbyK-Ag&ved=0ahUKEwiSraC79_KEAxVds1YBHT2eAo8Q4dUDCBA&uact=5&oq=godot+pass+var+to+another+script&gs_lp=Egxnd3Mtd2l6LXNlcnAiIGdvZG90IHBhc3MgdmFyIHRvIGFub3RoZXIgc2NyaXB0MgUQIRifBUjKK1DCDFjBKHABeACQAQGYAcQDoAHhIqoBCTAuMS45LjMuMrgBA8gBAPgBAZgCDqACxh7CAgoQABhHGNYEGLADwgIEECMYJ8ICBhAAGBYYHsICCxAAGIAEGIoFGIYDwgIHECEYChigAZgDAIgGAZAGB5IHCTEuMC45LjMuMaAH_Cg&sclient=gws-wiz-serp#kpvalbx=_9MHyZaD6Ap2b2roP072I6Ag_31
+https://stackoverflow.com/questions/74840830/i-am-missing-a-lifecycle-initialization-method-after-ready

@@ -20,6 +20,7 @@ grow_vertical = 2
 
 [node name="TitleLabel" type="Label" parent="CanvasLayer/Control"]
 top_level = true
+layout_mode = 0
 offset_top = 50.0
 offset_right = 1024.0
 offset_bottom = 200.0
@@ -33,6 +34,7 @@ uppercase = true
 
 [node name="PlayButton" type="Button" parent="CanvasLayer/Control"]
 top_level = true
+layout_mode = 0
 offset_left = 150.0
 offset_top = 200.0
 offset_right = 350.0
@@ -44,6 +46,7 @@ text = "Play"
 
 [node name="QuitButton" type="Button" parent="CanvasLayer/Control"]
 top_level = true
+layout_mode = 0
 offset_left = 824.0
 offset_top = 500.0
 offset_right = 974.0
