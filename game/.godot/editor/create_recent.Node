@@ -1,11 +1,11 @@
+Timer
+CanvasLayer
+Label
 Node
 ColorRect
 TextureRect
 Control
-CanvasLayer
 AudioStreamPlayer2D
-Timer
-Label
 Panel
 Node2D
 Camera2D

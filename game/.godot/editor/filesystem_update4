@@ -1,13 +1,10 @@
-res://scenes/splash_screen.tscn
+res://scenes/cell.tscn
 res://scripts/main.gd
+res://scripts/cell.gd
+res://scenes/splash_screen.tscn
 res://scenes/main.tscn
 res://scenes/intro.tscn
 res://scenes/cell_manager.tscn
-res://scenes/cell.tscn
 res://scenes/court.tscn
 res://UI/pause_menu.tscn
-res://scripts/Global_Singleton.gd
-res://scripts/global_singleton.gd
-res://scripts/cell_manager.gd
-res://scripts/cell.gd
-res://references.txt
+res://UI/popup_lines_theme.tres

@@ -1,0 +1,148 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4fryjdrmcjyu"]
+
+[ext_resource type="Script" path="res://scripts/cell.gd" id="1_8sjuh"]
+[ext_resource type="Texture2D" uid="uid://bgc7iu4ijyfj2" path="res://icon.svg" id="2_f16k5"]
+[ext_resource type="Script" path="res://scenes/voice_file.gd" id="3_wr8be"]
+
+[node name="Cell" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_8sjuh")
+
+[node name="CellLabel" type="Label" parent="."]
+offset_left = 387.0
+offset_top = 25.0
+offset_right = 637.0
+offset_bottom = 75.0
+text = "This is your prison cell"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CourtButton" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 250.0
+offset_bottom = 100.0
+text = "Go to the Court Room
+"
+
+[node name="CountdownTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="SoundTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 225.0
+offset_bottom = 60.0
+text = "Time Remaining: 00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(512, 300)
+
+[node name="Voices" type="Node" parent="."]
+
+[node name="voice1" type="Sprite2D" parent="Voices"]
+position = Vector2(3, 567)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice1"]
+scale = Vector2(4, 4)
+attenuation = 2.92818
+panning_strength = 5.0
+
+[node name="voice2" type="Sprite2D" parent="Voices"]
+position = Vector2(-1021, -94)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice2"]
+scale = Vector2(4, 4)
+attenuation = 1.27457
+panning_strength = 2.36
+
+[node name="voice3" type="Sprite2D" parent="Voices"]
+position = Vector2(-70, -15)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice3"]
+scale = Vector2(4, 4)
+attenuation = 2.92818
+panning_strength = 1.65
+
+[node name="voice4" type="Sprite2D" parent="Voices"]
+position = Vector2(504, -99)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice4"]
+scale = Vector2(4, 4)
+attenuation = 2.92818
+panning_strength = 5.0
+
+[node name="voice5" type="Sprite2D" parent="Voices"]
+position = Vector2(538, -699)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice5"]
+scale = Vector2(4, 4)
+attenuation = 2.92818
+panning_strength = 5.0
+
+[node name="voice6" type="Sprite2D" parent="Voices"]
+position = Vector2(1104, -26)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice6"]
+scale = Vector2(4, 4)
+attenuation = 1.18921
+panning_strength = 1.9
+
+[node name="voice7" type="Sprite2D" parent="Voices"]
+position = Vector2(2020, 20)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice7"]
+scale = Vector2(4, 4)
+attenuation = 2.92818
+panning_strength = 5.0
+
+[node name="voice8" type="Sprite2D" parent="Voices"]
+position = Vector2(1078, 569)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_f16k5")
+script = ExtResource("3_wr8be")
+metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice8"]
+scale = Vector2(4, 4)
+attenuation = 2.92818
+panning_strength = 5.0
+
+[connection signal="pressed" from="CourtButton" to="." method="_on_court_button_pressed"]
+[connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
+[connection signal="timeout" from="SoundTimer" to="." method="_on_sound_timer_timeout"]

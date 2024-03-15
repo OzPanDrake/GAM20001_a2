@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4fryjdrmcjyu"]
 
 [ext_resource type="Script" path="res://scripts/cell.gd" id="1_8sjuh"]
+[ext_resource type="Theme" uid="uid://dilmayu8igxp0" path="res://UI/popup_lines_theme.tres" id="2_b2avh"]
 [ext_resource type="Texture2D" uid="uid://bgc7iu4ijyfj2" path="res://icon.svg" id="2_f16k5"]
-[ext_resource type="AudioStream" uid="uid://bsvryq4vs0c6r" path="res://sounds/voice/Pirate_Coughing_Short_Cough.wav" id="2_nwlyj"]
 [ext_resource type="Script" path="res://scenes/voice_file.gd" id="3_wr8be"]
 
 [node name="Cell" type="Node2D"]
@@ -34,6 +34,9 @@ one_shot = true
 wait_time = 5.0
 autostart = true
 
+[node name="HideLineTimer" type="Timer" parent="."]
+one_shot = true
+
 [node name="TimerLabel" type="Label" parent="."]
 offset_left = 25.0
 offset_top = 10.0
@@ -46,6 +49,71 @@ vertical_alignment = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 300)
 
+[node name="LinesCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="line1" type="Label" parent="LinesCanvasLayer"]
+offset_left = 24.0
+offset_top = 410.0
+offset_right = 64.0
+offset_bottom = 433.0
+rotation = 0.472984
+theme = ExtResource("2_b2avh")
+
+[node name="line2" type="Label" parent="LinesCanvasLayer"]
+offset_left = 20.0
+offset_top = 308.0
+offset_right = 60.0
+offset_bottom = 331.0
+rotation = -0.675442
+theme = ExtResource("2_b2avh")
+
+[node name="line3" type="Label" parent="LinesCanvasLayer"]
+offset_left = 25.0
+offset_top = 203.0
+offset_right = 65.0
+offset_bottom = 226.0
+rotation = -0.472984
+theme = ExtResource("2_b2avh")
+
+[node name="line4" type="Label" parent="LinesCanvasLayer"]
+offset_left = 335.0
+offset_top = 88.0
+offset_right = 375.0
+offset_bottom = 111.0
+theme = ExtResource("2_b2avh")
+
+[node name="line5" type="Label" parent="LinesCanvasLayer"]
+offset_left = 626.0
+offset_top = 99.0
+offset_right = 666.0
+offset_bottom = 122.0
+rotation = 0.270526
+theme = ExtResource("2_b2avh")
+
+[node name="line6" type="Label" parent="LinesCanvasLayer"]
+offset_left = 698.0
+offset_top = 120.0
+offset_right = 738.0
+offset_bottom = 143.0
+rotation = 0.877901
+theme = ExtResource("2_b2avh")
+
+[node name="line7" type="Label" parent="LinesCanvasLayer"]
+offset_left = 776.0
+offset_top = 29.0
+offset_right = 816.0
+offset_bottom = 52.0
+rotation = 0.811578
+theme = ExtResource("2_b2avh")
+
+[node name="line8" type="Label" parent="LinesCanvasLayer"]
+offset_left = 915.0
+offset_top = 481.0
+offset_right = 955.0
+offset_bottom = 504.0
+rotation = -1.28282
+theme = ExtResource("2_b2avh")
+
 [node name="Voices" type="Node" parent="."]
 
 [node name="voice1" type="Sprite2D" parent="Voices"]
@@ -57,7 +125,6 @@ metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice1"]
 scale = Vector2(4, 4)
-stream = ExtResource("2_nwlyj")
 attenuation = 2.92818
 panning_strength = 5.0
 
@@ -70,7 +137,6 @@ metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice2"]
 scale = Vector2(4, 4)
-stream = ExtResource("2_nwlyj")
 attenuation = 1.27457
 panning_strength = 2.36
 
@@ -83,7 +149,6 @@ metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice3"]
 scale = Vector2(4, 4)
-stream = ExtResource("2_nwlyj")
 attenuation = 2.92818
 panning_strength = 1.65
 
@@ -96,7 +161,6 @@ metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice4"]
 scale = Vector2(4, 4)
-stream = ExtResource("2_nwlyj")
 attenuation = 2.92818
 panning_strength = 5.0
 
@@ -109,7 +173,6 @@ metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice5"]
 scale = Vector2(4, 4)
-stream = ExtResource("2_nwlyj")
 attenuation = 2.92818
 panning_strength = 5.0
 
@@ -122,7 +185,6 @@ metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice6"]
 scale = Vector2(4, 4)
-stream = ExtResource("2_nwlyj")
 attenuation = 1.18921
 panning_strength = 1.9
 
@@ -135,7 +197,6 @@ metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice7"]
 scale = Vector2(4, 4)
-stream = ExtResource("2_nwlyj")
 attenuation = 2.92818
 panning_strength = 5.0
 
@@ -148,10 +209,10 @@ metadata/_edit_group_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Voices/voice8"]
 scale = Vector2(4, 4)
-stream = ExtResource("2_nwlyj")
 attenuation = 2.92818
 panning_strength = 5.0
 
 [connection signal="pressed" from="CourtButton" to="." method="_on_court_button_pressed"]
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 [connection signal="timeout" from="SoundTimer" to="." method="_on_sound_timer_timeout"]
+[connection signal="timeout" from="HideLineTimer" to="." method="_on_hide_line_timer_timeout"]
