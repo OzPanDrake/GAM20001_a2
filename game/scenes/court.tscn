@@ -1,19 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd4oehs5lcnfs"]
+[gd_scene load_steps=11 format=3 uid="uid://dd4oehs5lcnfs"]
 
 [ext_resource type="Script" path="res://scripts/court.gd" id="1_4gxrg"]
 [ext_resource type="Texture2D" uid="uid://ryqnsl2n81mr" path="res://images/court.png" id="2_8oogi"]
+[ext_resource type="AnimationLibrary" uid="uid://b61ptvirsxg7p" path="res://animations/fade.res" id="3_lkj47"]
+[ext_resource type="Texture2D" uid="uid://gstlb3rqodn7" path="res://images/pad.png" id="3_ohjrt"]
+[ext_resource type="Theme" uid="uid://cnl8njk3h2y42" path="res://UI/pad_theme.tres" id="4_xc21m"]
+[ext_resource type="FontFile" uid="uid://c3o4vwmneggky" path="res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf" id="5_jmbh1"]
+[ext_resource type="AudioStream" uid="uid://dweeklaxbbt5p" path="res://sounds/effects/game_win.mp3" id="7_xrdig"]
+[ext_resource type="AudioStream" uid="uid://crj568g5v1lxk" path="res://sounds/effects/game_loss.mp3" id="8_rhp2n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1qdki"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfpc4"]
+content_margin_left = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0.101961)
+border_color = Color(0, 0, 0, 1)
 
 [node name="Court" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_4gxrg")
+
+[node name="OverlayLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Overlay" type="ColorRect" parent="OverlayLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 603.0
+offset_bottom = 302.0
 
 [node name="CourtLabel" type="Label" parent="CanvasLayer/Control"]
 modulate = Color(0, 0, 0, 1)
@@ -40,7 +70,290 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_8oogi")
 
+[node name="Notepad" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 800.0
+offset_top = 350.0
+offset_right = 697.0
+offset_bottom = 548.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ohjrt")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/Notepad"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 80.0
+offset_right = 372.0
+offset_bottom = 462.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control/Notepad/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("4_xc21m")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1qdki")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Notepad/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fixed_Label" type="Label" parent="CanvasLayer/Control/Notepad/MarginContainer/Panel/VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_jmbh1")
+theme_override_font_sizes/font_size = 30
+text = "My Innocence:"
+
+[node name="PadLabel" type="Label" parent="CanvasLayer/Control/Notepad/MarginContainer/Panel/VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_jmbh1")
+theme_override_font_sizes/font_size = 30
+
+[node name="QuestionForm" type="VBoxContainer" parent="CanvasLayer/Control"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+layout_mode = 0
+offset_left = 31.0
+offset_top = 64.0
+offset_right = 534.0
+offset_bottom = 579.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/QuestionForm"]
+layout_mode = 2
+text = "Who is the killer? "
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/QuestionForm/Label"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_right = -68.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_constants/caret_width = 0
+theme_override_fonts/font = ExtResource("5_jmbh1")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfpc4")
+placeholder_text = "Enter answers here"
+caret_blink = true
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/QuestionForm"]
+layout_mode = 2
+text = "Is the killer in the prison with you? "
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/QuestionForm/Label2"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_right = -68.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_constants/caret_width = 0
+theme_override_fonts/font = ExtResource("5_jmbh1")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfpc4")
+placeholder_text = "Enter answers here"
+caret_blink = true
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control/QuestionForm"]
+layout_mode = 2
+text = "What was the weapon?"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/QuestionForm/Label3"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_right = -68.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_constants/caret_width = 0
+theme_override_fonts/font = ExtResource("5_jmbh1")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfpc4")
+placeholder_text = "Enter answers here"
+caret_blink = true
+
+[node name="Label4" type="Label" parent="CanvasLayer/Control/QuestionForm"]
+layout_mode = 2
+text = "Where are the bodies? "
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/QuestionForm/Label4"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_right = -68.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_constants/caret_width = 0
+theme_override_fonts/font = ExtResource("5_jmbh1")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfpc4")
+placeholder_text = "Enter answers here"
+caret_blink = true
+
+[node name="Label5" type="Label" parent="CanvasLayer/Control/QuestionForm"]
+layout_mode = 2
+text = "What is the name of the witness? "
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/QuestionForm/Label5"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_right = -68.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_constants/caret_width = 0
+theme_override_fonts/font = ExtResource("5_jmbh1")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfpc4")
+placeholder_text = "Enter answers here"
+caret_blink = true
+
+[node name="Label6" type="Label" parent="CanvasLayer/Control/QuestionForm"]
+layout_mode = 2
+text = "Is the winness in prison with you? "
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/QuestionForm/Label6"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_right = -68.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/line_spacing = 0
+theme_override_constants/caret_width = 0
+theme_override_fonts/font = ExtResource("5_jmbh1")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfpc4")
+placeholder_text = "Enter answers here"
+caret_blink = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+top_level = true
+layout_mode = 0
+offset_left = 315.0
+offset_top = 230.0
+offset_right = 390.0
+offset_bottom = 250.0
+text = "Submit"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 300)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("3_lkj47")
+}
+
+[node name="WinAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_xrdig")
+volume_db = -10.0
+
+[node name="LoseAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_rhp2n")
+volume_db = -10.0
+
+[node name="EndGameCanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Control" type="Control" parent="EndGameCanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="EndGameCanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainButton" type="Button" parent="EndGameCanvasLayer/Control"]
+top_level = true
+offset_left = 924.0
+offset_top = 50.0
+offset_right = 974.0
+offset_bottom = 85.0
+text = "Exit"
+
+[node name="EndGameLabel" type="Label" parent="EndGameCanvasLayer/Control"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+layout_mode = 0
+offset_left = 412.0
+offset_top = 150.0
+offset_right = 612.0
+offset_bottom = 300.0
+text = "1: Condition
+2: Condition
+3: Condition
+4: Condition
+5: Condition"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndGameLabel2" type="Label" parent="EndGameCanvasLayer/Control"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+layout_mode = 0
+offset_left = 387.0
+offset_top = 50.0
+offset_right = 637.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 30
+text = "You Something!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndGameLabel3" type="Label" parent="EndGameCanvasLayer/Control"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+layout_mode = 0
+offset_left = 312.0
+offset_top = 400.0
+offset_right = 712.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 30
+text = "You Have Been Condition"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="CanvasLayer/Control/MainButton" to="." method="_on_main_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="EndGameCanvasLayer/Control/MainButton" to="." method="_on_main_button_pressed"]

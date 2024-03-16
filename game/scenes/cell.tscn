@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4fryjdrmcjyu"]
+[gd_scene load_steps=14 format=3 uid="uid://b4fryjdrmcjyu"]
 
 [ext_resource type="Script" path="res://scripts/cell.gd" id="1_8sjuh"]
 [ext_resource type="Theme" uid="uid://dilmayu8igxp0" path="res://UI/popup_lines_theme.tres" id="2_b2avh"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dop87fcw3ohy4" path="res://images/noise_alert.png" id="6_dx10a"]
 [ext_resource type="Texture2D" uid="uid://gstlb3rqodn7" path="res://images/pad.png" id="6_quacq"]
 [ext_resource type="Theme" uid="uid://cnl8njk3h2y42" path="res://UI/pad_theme.tres" id="7_sjfnq"]
+[ext_resource type="FontFile" uid="uid://c3o4vwmneggky" path="res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf" id="9_1u2fl"]
+[ext_resource type="AnimationLibrary" uid="uid://b61ptvirsxg7p" path="res://animations/fade.res" id="9_pvus8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x8woe"]
 content_margin_left = 1.0
@@ -22,6 +24,19 @@ content_margin_bottom = 1.0
 [node name="Cell" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_8sjuh")
+
+[node name="OverlayLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Overlay" type="ColorRect" parent="OverlayLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CountdownTimer" type="Timer" parent="."]
 wait_time = 10.0
@@ -306,16 +321,25 @@ grow_vertical = 2
 [node name="Fixed_Label" type="Label" parent="CanvasLayer/Control/Notepad/MarginContainer/Panel/VBoxContainer"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("9_1u2fl")
+theme_override_font_sizes/font_size = 30
 text = "My Innocence:"
 
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/Notepad/MarginContainer/Panel/VBoxContainer"]
 modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("9_1u2fl")
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_l4f4i")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_t8cd7")
 placeholder_text = "Click and type here to take notes, you can then use these notes in the court room"
 wrap_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("9_pvus8")
+}
 
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
 [connection signal="timeout" from="SoundTimer" to="." method="_on_sound_timer_timeout"]

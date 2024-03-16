@@ -14,3 +14,7 @@ res://scripts/scene_switcher.gd
 res://UI/pad_theme.tres
 res://scripts/global_singleton.gd
 res://scripts/intro.gd
+res://scenes/game.tscn
+res://texts/intro.txt
+res://animations/fade.res
+res://documentation/references.txt

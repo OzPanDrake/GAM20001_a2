@@ -9,3 +9,11 @@ https://www.google.com/search?q=godot+pass+var+to+another+script&client=firefox-
 https://stackoverflow.com/questions/74840830/i-am-missing-a-lifecycle-initialization-method-after-ready
 
 https://www.youtube.com/watch?v=A-926oL_8NM
+
+https://forum.godotengine.org/t/is-there-a-wait-function-to-godot/38759
+
+https://www.reddit.com/r/godot/comments/cmno16/textsplit_in_gdscript/
+
+https://fonts.google.com/specimen/Nanum+Brush+Script?preview.text=my%20innocence
+
+https://www.youtube.com/watch?v=aOeyPj9uSxw

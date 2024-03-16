@@ -1,10 +1,13 @@
 extends Node2D
 
-# All timers setup
+# All timers nodes
 @onready var cd_timer : Timer = $CountdownTimer
 @onready var voice_timer : Timer = $SoundTimer
 @onready var hide_line_timer : Timer = $HideLineTimer
+# TextEdit node
 @onready var input_text_edit : TextEdit = $CanvasLayer/Control/Notepad/MarginContainer/Panel/VBoxContainer/TextEdit
+# AnimationPlayer node
+@onready var anim = $AnimationPlayer
 
 # Global variables and arrays
 var rng
@@ -23,12 +26,14 @@ var main_sound_show : bool
 
 # Setup function, calls on scene start
 func _ready() -> void:
+	anim.play("fade_out")
 	rng = RandomNumberGenerator.new()
 	main_lines_played = 0
 	bs_lines_played = 0
 	main_line_chance = 0
 	$CanvasLayer/SoundAlertImage.hide()
 	main_sound_show = false
+	await get_tree().create_timer(1.0).timeout
 	setup_timers()
 	call_deferred("setup_arrays")
 
@@ -38,9 +43,9 @@ func _process(_delta: float) -> void:
 
 # Sets up timer wait times and sarts timers
 func setup_timers():
-	cd_timer.wait_time = 300
-	voice_timer.wait_time = 2
-	hide_line_timer.wait_time = voice_timer.wait_time / 2
+	cd_timer.wait_time = 200
+	voice_timer.wait_time = 5
+	hide_line_timer.wait_time = voice_timer.wait_time / 3
 	cd_timer.start()
 	voice_timer.start()
 
@@ -74,12 +79,16 @@ func setup_arrays():
 func _on_court_button_pressed() -> void:
 	input_text = input_text_edit.text
 	GlobalSingleton.notepad_text = input_text
+	anim.play("fade_in")
+	await get_tree().create_timer(1.0).timeout
 	SceneSwitcher.switch_scene("res://scenes/court.tscn")
 
 # Event for countdown timer, ends scene when time runs out, switches to court scene
 func _on_countdown_timer_timeout() -> void:
 	input_text = input_text_edit.text
 	GlobalSingleton.notepad_text = input_text
+	anim.play("fade_in")
+	await get_tree().create_timer(1.0).timeout
 	SceneSwitcher.switch_scene("res://scenes/court.tscn")
 
 # Returns formatted time string hh:mm:ss
