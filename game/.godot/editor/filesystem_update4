@@ -1,6 +1,5 @@
 res://scenes/cell.tscn
 res://scripts/main.gd
-res://scripts/cell.gd
 res://scenes/splash_screen.tscn
 res://scenes/main.tscn
 res://scenes/intro.tscn
@@ -8,3 +7,10 @@ res://scenes/cell_manager.tscn
 res://scenes/court.tscn
 res://UI/pause_menu.tscn
 res://UI/popup_lines_theme.tres
+res://scripts/cell.gd
+res://scripts/court.gd
+res://UI/pause_menu.gd
+res://scripts/scene_switcher.gd
+res://UI/pad_theme.tres
+res://scripts/global_singleton.gd
+res://scripts/intro.gd

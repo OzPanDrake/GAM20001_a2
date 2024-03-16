@@ -6,8 +6,13 @@ const INTRO_FILE = "res://texts/intro.txt"
 
 func _ready() -> void:
 	var text = load_intro()
-	$CanvasLayer/IntroLabel.text = text
-	timer.wait_time = 1
+	$CanvasLayer/Control/IntroLabel1.text = text
+	$CanvasLayer/Control/IntroLabel2.text = text
+	$CanvasLayer/Control/IntroLabel1.hide()
+	$CanvasLayer/Control/IntroLabel2.hide()
+	$CanvasLayer/Control/IntroImage1.hide()
+	$CanvasLayer/Control/IntroImage2.hide()
+	timer.wait_time = 10
 	timer.start()
 
 func _on_timer_timeout() -> void:

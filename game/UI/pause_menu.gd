@@ -25,5 +25,6 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_main_button_pressed() -> void:
-	cell_manager.game_paused = false
-	SceneSwitcher.switch_scene("res://scenes/main.tscn")
+	#cell_manager.game_paused = false
+	#SceneSwitcher.switch_scene("res://scenes/main.tscn")
+	get_tree().quit()

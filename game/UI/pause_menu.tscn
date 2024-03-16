@@ -56,7 +56,7 @@ text = "Resume"
 [node name="MainButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_0r7dc")
-text = "Main Menu"
+text = "Exit"
 
 [connection signal="pressed" from="Panel/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/MainButton" to="." method="_on_main_button_pressed"]
