@@ -12,8 +12,7 @@ func _ready() -> void:
 	$CanvasLayer/Control/IntroLabel2.text = split_text[1]
 	$CanvasLayer/Control/IntroLabel2.hide()
 	$CanvasLayer/Control/IntroImage2.hide()
-	#await get_tree().create_timer(8.0).timeout
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(8.0).timeout
 	start_intro()
 
 func start_intro():
@@ -25,8 +24,7 @@ func start_intro():
 	$CanvasLayer/Control/IntroImage2.show()
 	await get_tree().create_timer(0.5).timeout
 	anim.play("fade_out")
-	#await get_tree().create_timer(5.0).timeout
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(5.0).timeout
 	Start_Game()
 
 func Start_Game() -> void:
