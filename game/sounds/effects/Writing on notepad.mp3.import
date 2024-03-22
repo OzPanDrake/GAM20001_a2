@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bng7v40ii5pg"
+path="res://.godot/imported/Writing on notepad.mp3-b174e4d2c8f57de85006316e01a47d68.mp3str"
+
+[deps]
+
+source_file="res://sounds/effects/Writing on notepad.mp3"
+dest_files=["res://.godot/imported/Writing on notepad.mp3-b174e4d2c8f57de85006316e01a47d68.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

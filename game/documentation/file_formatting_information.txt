@@ -1,24 +1,38 @@
-Window: 1024x600
-Images: png
-	bus.png
-	cell.png
-	court.png
-	gavel_cuff_needle.png
-	noise_alert.png
-	pad.png
-	prison.png
-Sounds: mp3
-	game_loss.mp3
-	game_win.mp3
-	bs_line_1.mp3
-	bs_line_2.mp3
-	...
-	bs_line_#.mp3
-	main_line_1.mp3
-	main_line_2.mp3
-	...
-	main_line_#.mp3
-texts: txt
-	bs_lines.txt
-	main_lines.txt
-	intro.txt
+Window size: 1024 x 600
+Images: .png
+	Images from most important to least important
+		cell.png		(Prison cell scene0
+		court.png		(Courtroom scene)
+		pad.png			(notepad for in-game note taking, present in cell and court scenes
+		bus.png			(image shown in intro, can be something else)
+		prison.png		(image shown in intro, can be something else)
+		gavel_cuff_needle.png	(Main menu image, can be something else)
+		noise_alert.png		(not needed, to be removed)
+Sounds: .mp3
+	Sounds implemented in game, must be named like this
+		game_loss.mp3
+		game_win.mp3
+		bs_line_1.mp3
+		bs_line_2.mp3
+		...
+		bs_line_#.mp3
+		main_line_1.mp3
+		main_line_2.mp3
+		...
+		main_line_#.mp3
+	Sounds not in the game yet:
+	The same music files can be used for multiple scenes, these are places where I can add music to
+		main menu music
+		intro music
+		cell scene music
+		courtroom scene music
+		pause menu music
+	Other sounds that have not yet been added but can be implemented if needed
+		writing on notepad
+		cell ambience
+		court ambience
+		open/close pause menu
+texts: .txt
+		bs_lines.txt		(Bullshit lines, example: line 1 = bs_line_1.mp3)
+		main_lines.txt		(Main lines, example: line 1 = main_line_1.mp3)
+		intro.txt		(The introduction played after Play button is pressed)

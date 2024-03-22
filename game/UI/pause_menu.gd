@@ -17,6 +17,7 @@ func _process(_delta) -> void:
 func _on_cell_manager_toggle_game_paused(is_paused : bool) -> void:
 	if(is_paused):
 		show()
+		$OpenSound.play()
 	else:
 		hide()
 

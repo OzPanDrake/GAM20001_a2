@@ -22,7 +22,7 @@ func setup_q_and_a():
 	questions_array.append("What was the weapon? ")
 	questions_array.append("Where are the bodies? ")
 	questions_array.append("What is the name of the witness? ")
-	questions_array.append("Is the winness in prison with you? ")
+	questions_array.append("Is the witness in prison with you? ")
 	answers_array.append("Tony")
 	answers_array.append("Yes")
 	answers_array.append("Shovel")
@@ -30,7 +30,7 @@ func setup_q_and_a():
 	answers_array.append("Marty")
 	answers_array.append("No")
 	for ans in answers_array:
-		print(ans)
+		print_debug(ans)
 
 func _on_main_button_pressed() -> void:
 	#SceneSwitcher.switch_scene("res://scenes/main.tscn")
@@ -44,8 +44,8 @@ func _on_button_pressed():
 	input_answers_array.append($CanvasLayer/Control/QuestionForm/Label4/TextEdit.text)
 	input_answers_array.append($CanvasLayer/Control/QuestionForm/Label5/TextEdit.text)
 	input_answers_array.append($CanvasLayer/Control/QuestionForm/Label6/TextEdit.text)
-	print("ip: " + input_answers_array[0])
-	print("ans:" + answers_array[0])
+	#print("ip: " + input_answers_array[0])
+	#print("ans:" + answers_array[0])
 	check_answers()
 
 func check_answers():
@@ -53,19 +53,19 @@ func check_answers():
 	var correct : bool = true
 	for ans in answers_array:
 		if(input_answers_array[index].to_lower().contains(answers_array[index].to_lower())):
-			print(str(index + 1) + ": Correct")
+			print_debug(str(index + 1) + ": Correct")
 			correct_answers_array.append(str(index + 1) + ": Correct")
 			index += 1
 		else:
 			correct = false
-			print(str(index + 1) + ": Incorrect")
+			print_debug(str(index + 1) + ": Incorrect")
 			correct_answers_array.append(str(index + 1) + ": Inorrect")
 			index += 1
 	if !correct:
-		print("Loser!")
+		print_debug("Loser!")
 		lose()
 	else:
-		print("Winner!")
+		print_debug("Winner!")
 		win()
 
 func lose():

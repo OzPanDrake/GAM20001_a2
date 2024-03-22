@@ -32,15 +32,15 @@ func _process(_delta) -> void:
 	pass
 
 func load_lines(input_file):
-	if(FileAccess.file_exists(input_file)):
-		var output_array = []
-		var lines_res = input_file
-		var file = FileAccess.open(lines_res, FileAccess.READ)
-		while(!file.eof_reached()):
-			var file_line = file.get_line()
-			output_array.append(file_line)
-		file.close()
-		return output_array
+	#if(FileAccess.file_exists(input_file)):
+	var output_array = []
+	#var lines_res = input_file
+	var file = FileAccess.open(input_file, FileAccess.READ)
+	while(!file.eof_reached()):
+		var file_line = file.get_line()
+		output_array.append(file_line)
+	file.close()
+	return output_array
 		
 func _input(event : InputEvent) -> void:
 	if(event.is_action_pressed("ui_cancel")):

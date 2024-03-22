@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bc6ilo1rhty56"]
+[gd_scene load_steps=5 format=3 uid="uid://bc6ilo1rhty56"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_afbki"]
 [ext_resource type="Theme" uid="uid://bxogfjdc43myj" path="res://UI/main_menu_theme.tres" id="2_g50nc"]
-[ext_resource type="Texture2D" uid="uid://cpykayw38pukc" path="res://images/gavel_cuffs_needle.png" id="3_llimd"]
+[ext_resource type="Texture2D" uid="uid://dkqsw7lm0ehwl" path="res://images/gavel_cuffs_needle.png" id="3_llimd"]
+[ext_resource type="AudioStream" uid="uid://0arwhdop3lem" path="res://sounds/music/Main Menu Music.mp3" id="4_m45xs"]
 
 [node name="Main" type="Node2D"]
 process_mode = 3
@@ -70,6 +71,11 @@ offset_top = 91.0
 offset_right = 825.0
 offset_bottom = 591.0
 texture = ExtResource("3_llimd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource("4_m45xs")
+volume_db = -20.0
+autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 300)

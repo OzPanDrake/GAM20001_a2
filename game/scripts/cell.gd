@@ -23,7 +23,6 @@ var bs_lines_played : int		# How many of the bs lines have been played in the ga
 var main_line_chance : int		# Chance of main voice being selected
 var main_sound_show : bool
 
-
 # Setup function, calls on scene start
 func _ready() -> void:
 	anim.play("fade_out")
@@ -59,19 +58,21 @@ func setup_arrays():
 	var index = 1
 	# Adds all voice node locations to voice location array
 	while(index <= 8):
-		location = "Voices/voice" + str(index) + "/AudioStreamPlayer2D"
+		location = "Voices/voice" + str(index) + "/AudioStreamPlayer2D" + str(index)
 		voice_location.append(location)
 		index += 1
 	index = 1
 	# Adds all bs voice resources/mp3s to bs voice file array
 	while(index < bs_array.size()):
-		voice_file = "res://sounds/voice/bs_lines/bs_voice_" + str(index) + ".mp3"
+		voice_file = "res://sounds/voice/bs_lines/bs_line_" + str(index) + ".mp3"
+		#print_debug(voice_file)
 		bs_voices_array.append(voice_file)
 		index += 1
 	index = 1
 	# Adds all main voice resources/mp3s to main voice file array
 	while(index < main_array.size()):
-		voice_file = "res://sounds/voice/main_lines/main_voice_" + str(index) + ".mp3"
+		voice_file = "res://sounds/voice/main_lines/main_line_" + str(index) + ".mp3"
+		#print_debug(voice_file)
 		main_voices_array.append(voice_file)
 		index += 1
 
@@ -105,14 +106,15 @@ func _on_sound_timer_timeout() -> void:
 	var sound_node : AudioStreamPlayer2D
 	rng.randomize()
 	index = rng.randi_range(0, voice_location.size() - 1)
-	line = get_node("LinesCanvasLayer/line" + str(index + 1))
+	#line = get_node("LinesCanvasLayer/line" + str(index + 1))
 	sound_node = get_node(voice_location[index])
 	rng.randomize()
 	if(play_main()):
-		index = rng.randi_range(0, main_array.size() - 2)
-		line.text = main_array[main_lines_played]
+		index = rng.randi_range(0, main_array.size() - 1)
+		#line.text = main_array[main_lines_played]
 		var sound_path = main_voices_array[main_lines_played]
 		var file = FileAccess.open(sound_path, FileAccess.READ)
+		#print_debug(sound_path)
 		var buffer = file.get_buffer(file.get_length())
 		var stream = AudioStreamMP3.new()
 		stream.data = buffer
@@ -124,26 +126,55 @@ func _on_sound_timer_timeout() -> void:
 		main_lines_played += 1
 		$CanvasLayer/SoundAlertImage.show()
 		main_sound_show = true
-		print_debug("Main: " + str(main_lines_played))
+		#print_debug("Main: " + str(main_lines_played))
 	else:
 		index = rng.randi_range(0, bs_array.size() - 2)
-		line.text = bs_array[index]
 		var sound_path = bs_voices_array[index]
-		var file = FileAccess.open(sound_path, FileAccess.READ)
-		var buffer = file.get_buffer(file.get_length())
-		var stream = AudioStreamMP3.new()
-		stream.data = buffer
-		sound_node.stream = stream
+		var sound = load_mp3(sound_path)
+		sound_node.stream = sound
 		sound_node.play()
 		hide_line_timer.start()
 		main_line_chance += 1
-		file.close()
+		#file.close()
 		bs_lines_played += 1
-		print_debug("BS: " + str(bs_lines_played))
+		#print_debug("BS: " + str(bs_lines_played))
+
+func load_mp3(path):
+	#print_debug(path)
+	#var dir = DirAccess.open(path)
+	#recursiveWalk("res://sounds/")
+	if(FileAccess.file_exists(path)):
+		print_debug("file exists")
+	else:
+		print_debug("no file")
+		
+	var file = FileAccess.open(path, FileAccess.READ)
+	#print_debug(error_string(FileAccess.get_open_error()))
+	
+	var sound = AudioStreamMP3.new()
+	sound.data = file.get_buffer(file.get_length())
+	file.close()
+	return sound
+
+func recursiveWalk(dirPath):
+	var dir = DirAccess.open(dirPath)
+	dir.list_dir_begin()
+	var fileName = dir.get_next()
+	while fileName != "":
+		var filePath = dirPath + "/" + fileName
+		if dir.current_is_dir():
+			print("Dir found decending " + filePath)
+			recursiveWalk(filePath)
+		else:
+			print("File Path: " + filePath)
+			# Process file HERE
+		fileName = dir.get_next()
+	print("Directory walking done: " + dirPath)
+	dir.list_dir_end()
 
 # Event for hide kine timer, hides the current displayed voice line text
 func _on_hide_line_timer_timeout() -> void:
-	line.text = ""
+	#line.text = ""
 	if(main_sound_show):
 		$CanvasLayer/SoundAlertImage.hide()
 		main_sound_show = false

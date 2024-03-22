@@ -1,14 +1,1 @@
-Label
-ColorRect
-Control
-CanvasLayer
 AudioStreamPlayer
-Button
-TextEdit
-VBoxContainer
-AnimationPlayer
-TextureRect
-Panel
-MarginContainer
-LineEdit
-DirectionalLight2D
