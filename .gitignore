@@ -1,0 +1,9 @@
+# Assignment documents, store in OneDrive
+docs/
+
+# Game assets, store in OneDrive
+game/images
+game/sounds
+
+# Game documentation, store in OneDrive
+game/documentation
