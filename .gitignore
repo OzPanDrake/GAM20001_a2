@@ -4,6 +4,7 @@ docs/
 # Game assets, store in OneDrive
 game/images
 game/sounds
+game/models
 
 # Game documentation, store in OneDrive
 game/documentation
