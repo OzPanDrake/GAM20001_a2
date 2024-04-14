@@ -1,94 +1,41 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711088276
-export_presets.cfg::TextFile::-1::1711088217::0::1::::<><>::
-icon.svg::CompressedTexture2D::2813640826791971697::1711088217::1711088277::1::::<><>::
-::res://animations/::1711088217
-fade.res::AnimationLibrary::4616894459199505759::1711088217::0::1::::<><>::
-::res://images/::1711088217
-bus.webp::CompressedTexture2D::289975047754715637::1711088217::1711088217::1::::<><>::
-cell.webp::CompressedTexture2D::6200253937810657861::1711088217::1711088217::1::::<><>::
-court.webp::CompressedTexture2D::3897665643198443401::1711088217::1711088217::1::::<><>::
-gavel_cuffs_needle.png::CompressedTexture2D::7895314423179140227::1711088217::1711088217::1::::<><>::
-noise_alert.png::CompressedTexture2D::7581206668266834437::1711088217::1711088217::1::::<><>::
-pad.png::CompressedTexture2D::6590260918124060042::1711088217::1711088217::1::::<><>::
-prison.png::CompressedTexture2D::1406574669631190078::1711088217::1711088217::1::::<><>::
-::res://scenes/::1711088217
-cell.tscn::PackedScene::4433294564030179096::1711088217::0::1::::<><>::res://scripts/cell.gd<>uid://dilmayu8igxp0::::res://UI/popup_lines_theme.tres<>uid://bgc7iu4ijyfj2::::res://icon.svg<>res://scenes/voice_file.gd<>uid://culpjnvb65uyf::::res://images/cell.webp<>uid://dganmplb3oi7v::::res://images/noise_alert.png<>uid://c05mvtpkhp7qc::::res://images/pad.png<>uid://cnl8njk3h2y42::::res://UI/pad_theme.tres<>uid://c3o4vwmneggky::::res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://ceitgdmokjiox::::res://sounds/effects/Cell Ambience.mp3
-cell_manager.tscn::PackedScene::4396901953985580854::1711088217::0::1::::<><>::res://scripts/cell_manager.gd<>uid://b4fryjdrmcjyu::::res://scenes/cell.tscn<>uid://bnbmi1u4xsiif::::res://UI/pause_menu.tscn
-court.tscn::PackedScene::7430553114783270640::1711088217::0::1::::<><>::res://scripts/court.gd<>uid://bvsb8pe35fivx::::res://images/court.webp<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://c05mvtpkhp7qc::::res://images/pad.png<>uid://cnl8njk3h2y42::::res://UI/pad_theme.tres<>uid://c3o4vwmneggky::::res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf<>uid://bs8nbbsjubhgu::::res://sounds/effects/game_win.mp3<>uid://ba8wl87icx2fo::::res://sounds/effects/game_loss.mp3<>uid://bua4pfip2svgd::::res://sounds/effects/Court Ambience.mp3
-game.tscn::PackedScene::5343563558524091512::1711088217::0::1::::<><>::res://scripts/game.gd<>uid://bc6ilo1rhty56::::res://scenes/main.tscn<>uid://b4fryjdrmcjyu::::res://scenes/cell.tscn<>uid://dd4oehs5lcnfs::::res://scenes/court.tscn<>uid://c6mm5r4uy7pea::::res://scenes/intro.tscn<>uid://c1qrl84p0x37e::::res://scenes/splash_screen.tscn
-intro.tscn::PackedScene::6974251169582604036::1711088217::0::1::::<><>::res://scripts/intro.gd<>uid://eep310spkt8h::::res://images/bus.webp<>uid://ubmcxxbb4hva::::res://images/prison.png<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://cl6stcnvjgenj::::res://sounds/music/Intro Music.mp3
-main.tscn::PackedScene::2591300237294453411::1711088217::0::1::::<><>::res://scripts/main.gd<>uid://bxogfjdc43myj::::res://UI/main_menu_theme.tres<>uid://dkqsw7lm0ehwl::::res://images/gavel_cuffs_needle.png<>uid://0arwhdop3lem::::res://sounds/music/Main Menu Music.mp3
-splash_screen.tscn::PackedScene::6631834957435744284::1711088217::0::1::::<><>::res://scripts/splash_screen.gd
-voice_file.gd::GDScript::-1::1711088217::0::1::::<>Sprite2D<>::
-::res://scripts/::1711088217
-cell.gd::GDScript::-1::1711088217::0::1::::<>Node2D<>::
-cell_manager.gd::GDScript::-1::1711088217::0::1::::CellManager<>Node<>::
-court.gd::GDScript::-1::1711088217::0::1::::<>Node2D<>::
-FolderListResource.gd::GDScript::-1::1711088217::0::1::::FolderListResource<>Resource<>::
-game.gd::GDScript::-1::1711088217::0::1::::<>Node2D<>::
-global_singleton.gd::GDScript::-1::1711088217::0::1::::<>Node<>::
-intro.gd::GDScript::-1::1711088217::0::1::::<>Node2D<>::
-main.gd::GDScript::-1::1711088217::0::1::::<>Node2D<>::
-scene_switcher.gd::GDScript::-1::1711088217::0::1::::<>Node<>::
-splash_screen.gd::GDScript::-1::1711088217::0::1::::<>Node2D<>::
-::res://sounds/::1711088217
-::res://sounds/effects/::1711088217
-Cell Ambience.mp3::AudioStreamMP3::5071276278354328251::1711088217::1711088217::1::::<><>::
-Court Ambience.mp3::AudioStreamMP3::3791985411846080067::1711088217::1711088217::1::::<><>::
-game_loss.mp3::AudioStreamMP3::2455902350222277244::1711088217::1711088217::1::::<><>::
-game_win.mp3::AudioStreamMP3::3718735522527048292::1711088217::1711088217::1::::<><>::
-Pause Menu.mp3::AudioStreamMP3::1305522120349010235::1711088217::1711088217::1::::<><>::
-Writing on notepad.mp3::AudioStreamMP3::97448350738971932::1711088217::1711088217::1::::<><>::
-::res://sounds/music/::1711088217
-Intro Music.mp3::AudioStreamMP3::5610041319829970291::1711088217::1711088217::1::::<><>::
-Main Menu Music.mp3::AudioStreamMP3::1755792940248865808::1711088217::1711088217::1::::<><>::
-Pause Music.mp3::AudioStreamMP3::8301990432101659094::1711088217::1711088217::1::::<><>::
-::res://sounds/voice/::1711088217
-::res://sounds/voice/bs_lines/::1711088217
-bs_line_1.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_2.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_3.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_4.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_5.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_6.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_7.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_8.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_9.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_10.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_11.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_12.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_13.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_14.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_15.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_16.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_17.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_18.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_19.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_20.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_21.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_22.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_23.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_24.mp3::::-1::1711088217::1711088217::1::::<><>::
-bs_line_25.mp3::::-1::1711088217::1711088217::1::::<><>::
-::res://sounds/voice/main_lines/::1711088217
-main_line_1.mp3::::-1::1711088217::1711088217::1::::<><>::
-main_line_2.mp3::::-1::1711088217::1711088217::1::::<><>::
-main_line_3.mp3::::-1::1711088217::1711088217::1::::<><>::
-main_line_4.mp3::::-1::1711088217::1711088217::1::::<><>::
-main_line_5.mp3::::-1::1711088217::1711088217::1::::<><>::
-::res://texts/::1711088217
-bs_lines.txt::TextFile::-1::1711088217::0::1::::<><>::
-intro.txt::TextFile::-1::1711088217::0::1::::<><>::
-main_lines.txt::TextFile::-1::1711088217::0::1::::<><>::
-::res://UI/::1711088217
-main_menu_background_theme.tres::Theme::3453267662044685030::1711088217::0::1::::<><>::
-main_menu_theme.tres::Theme::4030039084326110361::1711088217::0::1::::<><>::
-pad_theme.tres::Theme::5710031855498169245::1711088217::0::1::::<><>::
-pause_menu.gd::GDScript::-1::1711088217::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::3301684316858290645::1711088217::0::1::::<><>::res://UI/pause_menu.gd<>uid://b5psgtpppb2x8::::res://UI/pause_menu_theme.tres<>uid://dqjstmk4uscvu::::res://sounds/music/Pause Music.mp3<>uid://sun016l0kl12::::res://sounds/effects/Pause Menu.mp3
-pause_menu_theme.tres::Theme::4524156301595561651::1711088217::0::1::::<><>::
-popup_lines_theme.tres::Theme::7744210852358231747::1711088217::0::1::::<><>::
-::res://UI/Nanum_Brush_Script/::1711088217
-NanumBrushScript-Regular.ttf::FontFile::6768829746917781140::1711088217::1711088217::1::::<><>::
-OFL.txt::TextFile::-1::1711088217::0::1::::<><>::
+::res://::1713064666
+export_presets.cfg::TextFile::-1::1711086610::0::1::::<><>::
+icon.svg::CompressedTexture2D::2813640826791971697::1711086610::1711086610::1::::<><>::
+::res://animations/::1711086610
+fade.res::AnimationLibrary::4616894459199505759::1711086610::0::1::::<><>::
+::res://scenes/::1711086610
+cell.tscn::PackedScene::4433294564030179096::1711086610::0::1::::<><>::res://scripts/cell.gd<>uid://dilmayu8igxp0::::res://UI/popup_lines_theme.tres<>uid://bgc7iu4ijyfj2::::res://icon.svg<>res://scenes/voice_file.gd<>uid://culpjnvb65uyf::::res://images/cell.webp<>uid://dganmplb3oi7v::::res://images/noise_alert.png<>uid://c05mvtpkhp7qc::::res://images/pad.png<>uid://cnl8njk3h2y42::::res://UI/pad_theme.tres<>uid://c3o4vwmneggky::::res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://ceitgdmokjiox::::res://sounds/effects/Cell Ambience.mp3
+cell_manager.tscn::PackedScene::4396901953985580854::1711086610::0::1::::<><>::res://scripts/cell_manager.gd<>uid://b4fryjdrmcjyu::::res://scenes/cell.tscn<>uid://bnbmi1u4xsiif::::res://UI/pause_menu.tscn
+court.tscn::PackedScene::7430553114783270640::1711086610::0::1::::<><>::res://scripts/court.gd<>uid://bvsb8pe35fivx::::res://images/court.webp<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://c05mvtpkhp7qc::::res://images/pad.png<>uid://cnl8njk3h2y42::::res://UI/pad_theme.tres<>uid://c3o4vwmneggky::::res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf<>uid://bs8nbbsjubhgu::::res://sounds/effects/game_win.mp3<>uid://ba8wl87icx2fo::::res://sounds/effects/game_loss.mp3<>uid://bua4pfip2svgd::::res://sounds/effects/Court Ambience.mp3
+game.tscn::PackedScene::5343563558524091512::1711086610::0::1::::<><>::res://scripts/game.gd<>uid://bc6ilo1rhty56::::res://scenes/main.tscn<>uid://b4fryjdrmcjyu::::res://scenes/cell.tscn<>uid://dd4oehs5lcnfs::::res://scenes/court.tscn<>uid://c6mm5r4uy7pea::::res://scenes/intro.tscn<>uid://c1qrl84p0x37e::::res://scenes/splash_screen.tscn
+intro.tscn::PackedScene::6974251169582604036::1711086610::0::1::::<><>::res://scripts/intro.gd<>uid://eep310spkt8h::::res://images/bus.webp<>uid://ubmcxxbb4hva::::res://images/prison.png<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://cl6stcnvjgenj::::res://sounds/music/Intro Music.mp3
+main.tscn::PackedScene::2591300237294453411::1711086610::0::1::::<><>::res://scripts/main.gd<>uid://bxogfjdc43myj::::res://UI/main_menu_theme.tres<>uid://dkqsw7lm0ehwl::::res://images/gavel_cuffs_needle.png<>uid://0arwhdop3lem::::res://sounds/music/Main Menu Music.mp3
+splash_screen.tscn::PackedScene::6631834957435744284::1711086610::0::1::::<><>::res://scripts/splash_screen.gd
+voice_file.gd::GDScript::-1::1711086610::0::1::::<>Sprite2D<>::
+::res://scripts/::1711086610
+cell.gd::GDScript::-1::1711086610::0::1::::<>Node2D<>::
+cell_manager.gd::GDScript::-1::1711086610::0::1::::CellManager<>Node<>::
+court.gd::GDScript::-1::1711086610::0::1::::<>Node2D<>::
+FolderListResource.gd::GDScript::-1::1711086610::0::1::::FolderListResource<>Resource<>::
+game.gd::GDScript::-1::1711086610::0::1::::<>Node2D<>::
+global_singleton.gd::GDScript::-1::1711086610::0::1::::<>Node<>::
+intro.gd::GDScript::-1::1711086610::0::1::::<>Node2D<>::
+main.gd::GDScript::-1::1711086610::0::1::::<>Node2D<>::
+scene_switcher.gd::GDScript::-1::1711086610::0::1::::<>Node<>::
+splash_screen.gd::GDScript::-1::1711086610::0::1::::<>Node2D<>::
+::res://texts/::1711086610
+bs_lines.txt::TextFile::-1::1711086610::0::1::::<><>::
+intro.txt::TextFile::-1::1711086610::0::1::::<><>::
+main_lines.txt::TextFile::-1::1711086610::0::1::::<><>::
+::res://UI/::1711086610
+main_menu_background_theme.tres::Theme::3453267662044685030::1711086610::0::1::::<><>::
+main_menu_theme.tres::Theme::4030039084326110361::1711086610::0::1::::<><>::
+pad_theme.tres::Theme::5710031855498169245::1711086610::0::1::::<><>::
+pause_menu.gd::GDScript::-1::1711086610::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::3301684316858290645::1711086610::0::1::::<><>::res://UI/pause_menu.gd<>uid://b5psgtpppb2x8::::res://UI/pause_menu_theme.tres<>uid://dqjstmk4uscvu::::res://sounds/music/Pause Music.mp3<>uid://sun016l0kl12::::res://sounds/effects/Pause Menu.mp3
+pause_menu_theme.tres::Theme::4524156301595561651::1711086610::0::1::::<><>::
+popup_lines_theme.tres::Theme::7744210852358231747::1711086610::0::1::::<><>::
+::res://UI/Nanum_Brush_Script/::1711086610
+NanumBrushScript-Regular.ttf::FontFile::6768829746917781140::1711086610::1711086610::1::::<><>::
+OFL.txt::TextFile::-1::1711086610::0::1::::<><>::
