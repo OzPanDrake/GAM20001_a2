@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://drnknjsgu8akl"]
+
+[ext_resource type="Texture2D" uid="uid://db1nfks61112i" path="res://My Second Pizal Art.png" id="1_8hff4"]
+
+[node name="Enemy2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8hff4")

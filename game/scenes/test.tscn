@@ -1,3 +1,26 @@
-[gd_scene format=3 uid="uid://bj75b5irtjkhh"]
+[gd_scene load_steps=5 format=3 uid="uid://bj75b5irtjkhh"]
+
+[ext_resource type="Texture2D" uid="uid://bgc7iu4ijyfj2" path="res://icon.svg" id="1_hllnl"]
+[ext_resource type="Script" path="res://scenes/CharacterBody2D.gd" id="1_y3gd3"]
+[ext_resource type="Script" path="res://scenes/Timer.gd" id="3_e4u16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fqc6"]
+size = Vector2(128, 128)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(508, 303)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_y3gd3")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_hllnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_6fqc6")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("3_e4u16")
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
