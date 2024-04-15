@@ -1,5 +1,7 @@
+CharacterBody2D
+Marker2D
+Area2D
+CollisionShape2D
 Sprite2D
 Timer
-CollisionShape2D
-CharacterBody2D
 AudioStreamPlayer

@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dss5ah1ko45nd"]
+[gd_scene load_steps=3 format=3 uid="uid://dss5ah1ko45nd"]
 
 [ext_resource type="Texture2D" uid="uid://dsx1tvuujyfmc" path="res://My FIrst Pixal Art.png" id="1_xp4jv"]
 
-[node name="Enemy1" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myjby"]
+
+[node name="Enemy1" type="CharacterBody2D"]
+rotation = -1.5708
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.78814e-07, 4.17233e-07)
+scale = Vector2(0.0760456, 0.0760456)
 texture = ExtResource("1_xp4jv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_myjby")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj75b5irtjkhh"]
+
+[ext_resource type="PackedScene" uid="uid://b1koav7bivcqq" path="res://scenes/character_body_2d.tscn" id="2_ew0w7"]
+[ext_resource type="Script" path="res://scenes/Timer.gd" id="3_e4u16"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(508, 303)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("3_e4u16")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_ew0w7")]
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
