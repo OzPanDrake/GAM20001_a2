@@ -12,3 +12,7 @@ res://scenes/court.tscn
 res://scenes/Timer.gd
 res://scenes/projectile.gd
 res://scenes/enemy_2.gd
+res://scenes/power_up.gd
+res://scenes/power_up.tscn
+res://scenes/power_down.tscn
+res://scenes/power_down.gd

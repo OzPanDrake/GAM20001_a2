@@ -1,8 +1,11 @@
-AudioStreamPlayer2D
-CharacterBody2D
-Marker2D
-Area2D
+Button
+Control
 CollisionShape2D
+RigidBody2D
+CharacterBody2D
+Area2D
 Sprite2D
+AudioStreamPlayer2D
+Marker2D
 Timer
 AudioStreamPlayer

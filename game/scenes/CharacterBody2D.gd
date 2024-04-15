@@ -4,6 +4,7 @@ class_name PlayerCharacter
 
 @export var speed: int = 1
 @export var projectile: PackedScene
+@export var enemy: PackedScene
 @onready var spawn_point: Marker2D = $SpawnPoint
 const MOVE_SPEED: float = 400.0
 
@@ -23,5 +24,14 @@ func move() -> void:
 
 func shoot() -> void: 
 	var inst: Projectile = projectile.instantiate()
+	get_parent().add_child(inst)
+	inst.transform = spawn_point.global_transform
+
+func slow_move() -> void:
+	print("Power Up")
+
+
+func _on_button_pressed():
+	var inst: Enemy_2 = enemy.instantiate()
 	get_parent().add_child(inst)
 	inst.transform = spawn_point.global_transform
