@@ -1,28 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713172739
+::res://::1713182863
 export_presets.cfg::TextFile::-1::1711086610::0::1::::<><>::
 icon.svg::CompressedTexture2D::2813640826791971697::1711086610::1711086610::1::::<><>::
 My FIrst Pixal Art.png::CompressedTexture2D::8471755631611508350::1713076424::1713076424::1::::<><>::
 My Second Pizal Art.png::CompressedTexture2D::7283923520682654934::1713076428::1713076428::1::::<><>::
 Scimtar Pixal Art.png::CompressedTexture2D::9104185443471332591::1713076588::1713076588::1::::<><>::
+zapsplat_cartoon_anime_laser_blast_small_92470.mp3::AudioStreamMP3::7890205563646522924::1713182863::1713182863::1::::<><>::
 ::res://animations/::1713076305
 fade.res::AnimationLibrary::4616894459199505759::1711086610::0::1::::<><>::
-::res://scenes/::1713173281
+::res://scenes/::1713182181
 cell.tscn::PackedScene::4433294564030179096::1711086610::0::1::::<><>::res://scripts/cell.gd<>uid://dilmayu8igxp0::::res://UI/popup_lines_theme.tres<>uid://bgc7iu4ijyfj2::::res://icon.svg<>res://scenes/voice_file.gd<>uid://culpjnvb65uyf::::res://images/cell.webp<>uid://dganmplb3oi7v::::res://images/noise_alert.png<>uid://c05mvtpkhp7qc::::res://images/pad.png<>uid://cnl8njk3h2y42::::res://UI/pad_theme.tres<>uid://c3o4vwmneggky::::res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://ceitgdmokjiox::::res://sounds/effects/Cell Ambience.mp3
-cell_manager.tscn::PackedScene::4396901953985580854::1713080018::0::1::::<><>::res://scripts/cell_manager.gd<>uid://b4fryjdrmcjyu::::res://scenes/cell.tscn<>uid://bnbmi1u4xsiif::::res://UI/pause_menu.tscn
-CharacterBody2D.gd::GDScript::-1::1713173116::0::1::::<>CharacterBody2D<>::
-court.tscn::PackedScene::7430553114783270640::1713080018::0::1::::<><>::res://scripts/court.gd<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://cnl8njk3h2y42::::res://UI/pad_theme.tres<>uid://c3o4vwmneggky::::res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf
-enemy_1.tscn::PackedScene::8461641954222559677::1713173242::0::1::::<><>::uid://dsx1tvuujyfmc::::res://My FIrst Pixal Art.png
-enemy_2.tscn::PackedScene::8379940189794326503::1713173281::0::1::::<><>::uid://db1nfks61112i::::res://My Second Pizal Art.png
-enemy_3.tscn::PackedScene::8739330252709505351::1713173323::0::1::::<><>::uid://d2yeusmf0anpn::::res://Scimtar Pixal Art.png
+cell_manager.tscn::PackedScene::4396901953985580854::1713182180::0::1::::<><>::res://scripts/cell_manager.gd<>uid://b4fryjdrmcjyu::::res://scenes/cell.tscn<>uid://bnbmi1u4xsiif::::res://UI/pause_menu.tscn
+CharacterBody2D.gd::GDScript::-1::1713182040::0::1::::PlayerCharacter<>CharacterBody2D<>::
+character_body_2d.tscn::PackedScene::4232825586202320000::1713182180::0::1::::<><>::res://scenes/CharacterBody2D.gd<>uid://bgc7iu4ijyfj2::::res://icon.svg<>uid://dwrnq0ip6wrd4::::res://scenes/projectile.tscn
+court.tscn::PackedScene::7430553114783270640::1713182180::0::1::::<><>::res://scripts/court.gd<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://cnl8njk3h2y42::::res://UI/pad_theme.tres<>uid://c3o4vwmneggky::::res://UI/Nanum_Brush_Script/NanumBrushScript-Regular.ttf
+enemy_1.tscn::PackedScene::8461641954222559677::1713182180::0::1::::<><>::uid://dsx1tvuujyfmc::::res://My FIrst Pixal Art.png
+enemy_2.tscn::PackedScene::8379940189794326503::1713182180::0::1::::<><>::res://scenes/enemy_2.gd<>uid://db1nfks61112i::::res://My Second Pizal Art.png
 game.tscn::PackedScene::5343563558524091512::1711086610::0::1::::<><>::res://scripts/game.gd<>uid://bc6ilo1rhty56::::res://scenes/main.tscn<>uid://b4fryjdrmcjyu::::res://scenes/cell.tscn<>uid://dd4oehs5lcnfs::::res://scenes/court.tscn<>uid://c6mm5r4uy7pea::::res://scenes/intro.tscn<>uid://c1qrl84p0x37e::::res://scenes/splash_screen.tscn
 intro.tscn::PackedScene::6974251169582604036::1711086610::0::1::::<><>::res://scripts/intro.gd<>uid://eep310spkt8h::::res://images/bus.webp<>uid://ubmcxxbb4hva::::res://images/prison.png<>uid://b61ptvirsxg7p::::res://animations/fade.res<>uid://cl6stcnvjgenj::::res://sounds/music/Intro Music.mp3
 main.tscn::PackedScene::2591300237294453411::1711086610::0::1::::<><>::res://scripts/main.gd<>uid://bxogfjdc43myj::::res://UI/main_menu_theme.tres<>uid://dkqsw7lm0ehwl::::res://images/gavel_cuffs_needle.png<>uid://0arwhdop3lem::::res://sounds/music/Main Menu Music.mp3
-character_body_2d.tscn::PackedScene::4232825586202320000::1713173115::0::1::::<><>::res://scenes/CharacterBody2D.gd<>uid://bgc7iu4ijyfj2::::res://icon.svg
-splash_screen.tscn::PackedScene::6631834957435744284::1713080017::0::1::::<><>::res://scripts/splash_screen.gd
+projectile.tscn::PackedScene::8739330252709505351::1713182180::0::1::::<><>::res://scenes/projectile.gd<>uid://bgc7iu4ijyfj2::::res://icon.svg
+projectile.gd::GDScript::-1::1713182040::0::1::::Projectile<>Area2D<>::
+enemy_2.gd::GDScript::-1::1713182166::0::1::::Enemy_2<>CharacterBody2D<>::
+splash_screen.tscn::PackedScene::6631834957435744284::1713182180::0::1::::<><>::res://scripts/splash_screen.gd
 Sprite2DMovement.gd::GDScript::-1::1713068571::0::1::::<>Sprite2D<>::
-test.tscn::PackedScene::3086005248999301941::1713080018::0::1::::<><>::uid://bgc7iu4ijyfj2::::res://icon.svg<>res://scenes/CharacterBody2D.gd<>res://scenes/Timer.gd
-Timer.gd::GDScript::-1::1713079919::0::1::::<>Timer<>::
+test.tscn::PackedScene::3086005248999301941::1713182181::0::1::::<><>::uid://drnknjsgu8akl::::res://scenes/enemy_2.tscn<>uid://b1koav7bivcqq::::res://scenes/character_body_2d.tscn
 voice_file.gd::GDScript::-1::1711086610::0::1::::<>Sprite2D<>::
 ::res://scripts/::1711086610
 cell.gd::GDScript::-1::1711086610::0::1::::<>Node2D<>::
